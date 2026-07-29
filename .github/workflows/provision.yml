@@ -13,8 +13,8 @@ jobs:
     if: contains(github.event.issue.labels.*.name, 'provision-repo')
     runs-on: ubuntu-latest
     env:
-      ORG_NAME: "FullSailGameStudies"
-      EXPECTED_HASH: "0464d30442fec5754cd49dbec40e2242a0962b7470e4d37116852b14284be3c8"
+      ORG_NAME: "SPR-FS"
+      EXPECTED_HASH: "9dd2d3c76fd98fbf78c61c0c3550f8d4bc2963024d2168cc06c337d89f3accdb"
     steps:
       # ==================== GENERATE ORG BOT TOKEN ====================
       - name: Generate GitHub App Installation Token
