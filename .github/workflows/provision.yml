@@ -118,7 +118,7 @@ jobs:
           STUDENT_GITHUB_LOGIN: ${{ github.event.issue.user.login }}
         run: |
           MONTH_ABBREV=$(date +"%b" | tr '[:lower:]' '[:upper:]')
-          LABS="3 4 5 6 7"
+          LABS="2604"
 
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -126,8 +126,8 @@ jobs:
           SUMMARY=""
 
           for N in $LABS; do
-            TEMPLATE_REPO="OPS_Lab${N}"
-            NEW_REPO_NAME="OPS_${MONTH_ABBREV}_Lab${N}_${STUDENT_EMAIL_USERNAME}"
+            TEMPLATE_REPO="SPRLabs${N}"
+            NEW_REPO_NAME="SPR_${MONTH_ABBREV}_Labs_${STUDENT_EMAIL_USERNAME}"
 
             # Skip creation if the student already has this repo
             if gh repo view "$ORG/$NEW_REPO_NAME" > /dev/null 2>&1; then
