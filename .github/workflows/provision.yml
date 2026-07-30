@@ -10,7 +10,6 @@ permissions:
 
 jobs:
   create-repo:
-    if: contains(toJSON(github.event.issue.labels), 'provision-repo')
     runs-on: ubuntu-latest
     env:
       ORG_NAME: "SPR-FS"
