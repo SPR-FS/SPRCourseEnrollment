@@ -227,7 +227,7 @@ printf '%s' "studentname@student.fullsail.edu" | tr -d '\r' | sed -e 's/^[[:spac
 Create a plain text file (e.g. `students.txt`) with one email per line, then run:
 
 ```bash
-while IFS= read -r email; do
+while IFS= read -r email || [[ -n "$email" ]]; do
   printf '%s' "$email" | tr -d '\r' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr '[:upper:]' '[:lower:]' | sha256sum | awk '{print $1}' >> hash.db
 done < students.txt
 ```
