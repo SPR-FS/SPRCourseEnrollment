@@ -164,8 +164,7 @@ jobs:
               -f permission='write'
 
             echo "Setting topics..."
-            gh repo edit "$ORG/$NEW_REPO_NAME" --add-topic "ops-student"
-            gh repo edit "$ORG/$NEW_REPO_NAME" --add-topic "not-graded"
+            gh repo edit "$ORG/$NEW_REPO_NAME" --add-topic "spr-student"
 
             echo "Initializing assignment branch and PR..."
             rm -rf "$NEW_REPO_NAME"
@@ -177,12 +176,6 @@ jobs:
               git commit --allow-empty -m "Initialize assignment branch"
               git push origin assignment
             )
-            gh pr create \
-              --repo "$ORG/$NEW_REPO_NAME" \
-              --title "Grading and Feedback" \
-              --body "This Pull Request tracks your progress. Instructors will leave reviews here. Do not close or merge." \
-              --base "main" \
-              --head "assignment"
 
             SUMMARY="${SUMMARY}- https://github.com/${ORG}/${NEW_REPO_NAME}\n"
           done
