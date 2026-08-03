@@ -199,9 +199,9 @@ printf '%s' "your-secret-passcode" | sha256sum | awk '{print $1}'
    - This course has a single repository with all labs for the month in it. If you use multiple repositories you will need to add the different names to this variable separated by a space
    - You will also need to modify the TEMPLATE_REPO and NEW_REPO_NAME variables to match your template repositories and new name to match your course acronym.
    - ex: Your course is RBQ and you have 3 template labs names RBQLab1, RBQBonusLab, and RBQFinalProject
-        120 - LABS="Lab1 BonusLab FinalProject"
-        128 - TEMPLATE_REPO="RBQ${N}"
-        129 -  NEW_REPO_NAME="RBQ_${MONTH_ABBREV}_Labs_${STUDENT_EMAIL_USERNAME}"
+        - 120 - LABS="Lab1 BonusLab FinalProject"
+        - 128 - TEMPLATE_REPO="RBQ${N}"
+        - 129 -  NEW_REPO_NAME="RBQ_${MONTH_ABBREV}_Labs_${STUDENT_EMAIL_USERNAME}"
 3. Commit and push the change:
 
    ```bash
