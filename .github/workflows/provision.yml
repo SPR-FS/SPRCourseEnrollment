@@ -161,7 +161,7 @@ jobs:
               --method PUT \
               -H "Accept: application/vnd.github+json" \
               /repos/$ORG/$NEW_REPO_NAME/collaborators/$STUDENT_GITHUB_LOGIN \
-              -f permission='write'
+              -f permission='admin'
 
             echo "Setting topics..."
             gh repo edit "$ORG/$NEW_REPO_NAME" --add-topic "spr-student"
