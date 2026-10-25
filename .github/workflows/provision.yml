@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ORG_NAME: "SPR-FS"
-      EXPECTED_HASH: "9202e25b739866dcb93a723a734d8653bbe2f416fcab24f3412787154a6ef43e"
+      EXPECTED_HASH: "74dd3bce3735f03c95f1a1dfc40e6e10da6257d95b12085c08cfee2d40b10c69"
     steps:
       # ==================== GENERATE ORG BOT TOKEN ====================
       - name: Generate GitHub App Installation Token
